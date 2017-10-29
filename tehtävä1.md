@@ -55,3 +55,5 @@ Notice: Finished catalog run in 2.94 seconds
 ```
 Kokeilin SSH:n toimivuutta ottamalla yhteyden omaan palvelimeeni osoitteessa timonen.me.
 Yhteyden otto onnistui ongelmitta ja SSH toimii normaalisti.
+
+linux1 repositoryn alussa on modules kansio, joka sisältää init.pp tiedoston, jonka loin moduulia varten.
