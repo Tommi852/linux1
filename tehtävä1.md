@@ -16,7 +16,7 @@ Aloitin tehtävän päivittämällä repositoryt ja asentamalla puppetin komenno
 sudo apt-get update
 sudo apt-get install puppet
 ```
-Tämän jälkeen loin puppetin luomaan "/etc/puppet/" kansioon uuden moduliin komennoilla:
+Tämän jälkeen lisäsin puppetin luomaan "/etc/puppet/" kansioon uuden moduulin komennoilla:
 ```
 cd /etc/puppet
 sudo mkdir -p modules/ssh/manifests/
