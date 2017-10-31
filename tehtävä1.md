@@ -2,7 +2,7 @@
 # Linux tehtävä 1
 
 ## Käytettävä laitteisto:
-- Käyttöjärjestelmä: Windows 10 Pro 64bit
+- Käyttöjärjestelmä: Ubuntu 16.04.3 LTS
 - Prosessori: Intel Core i7-6700K
 - Näytönohjain: Gigabyte GeForce GTX 980 Ti G1 GAMING 6 GB
 - Emolevy: ASUS Z170 Pro Gaming
