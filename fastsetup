@@ -1,0 +1,10 @@
+#!/bin/bash
+setxkbmap fi
+sudo apt-get update
+sudo apt-get install -y git
+sudo apt-get install -y puppet
+git clone https://github.com/Tommi852/linux1.git
+git config --global user.email "timonen@outlook.com"
+git config --global user.name "Tommi Timonen"
+git config --global credential.helper "cache --timeout=36000"
+

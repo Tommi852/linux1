@@ -10,3 +10,20 @@
 - Muistitikku: Corsair 64GB Voyager Vega
 
 ## Aloitus
+Aloitin tehtävän tekemällä bash scriptin nimeltä "fastsetup" puppetin asennusta varten. Scriptiin kirjoitin:
+```
+#!/bin/bash
+setxkbmap fi
+sudo apt-get update
+sudo apt-get install -y git
+sudo apt-get install -y puppet
+git clone https://github.com/Tommi852/linux1.git
+git config --global user.email "timonen@outlook.com"
+git config --global user.name "Tommi Timonen"
+git config --global credential.helper "cache --timeout=36000"
+
+```
+Kokeilin scriptin toimintaa komennolla "bash fastsetup" ja kaikki ohjelmat sekä asetukset tulivat voimaan ongelmitta.
+
+Tämän jälkeen latasin githubista tunnilla tehdyt puppet moduulit.
+
