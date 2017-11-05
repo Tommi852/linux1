@@ -10,7 +10,7 @@
 - Muistitikku: Corsair 64GB Voyager Vega
 
 ## Aloitus
-Aloitin tehtävän tekemällä bash scriptin nimeltä "fastsetup" puppetin asennusta varten. Scriptiin kirjoitin:
+Aloitin tehtävän tekemällä bash scriptin nimeltä "fastsetup" githubin, puppetin ja asetusten asennusta varten. Scriptiin kirjoitin:
 ```
 #!/bin/bash
 setxkbmap fi
@@ -21,9 +21,11 @@ git clone https://github.com/Tommi852/linux1.git
 git config --global user.email "timonen@outlook.com"
 git config --global user.name "Tommi Timonen"
 git config --global credential.helper "cache --timeout=36000"
-
+cp -r linux1/puppet /etc/
 ```
-Kokeilin scriptin toimintaa komennolla "bash fastsetup" ja kaikki ohjelmat sekä asetukset tulivat voimaan ongelmitta.
+Kokeilin scriptin toimintaa komennolla "bash fastsetup" ja kaikki ohjelmat ohjelmat sekä asetukset tulivat voimaan ongelmitta.
+Scripti ei kuitenkaan onnistunut kopioimaan puppet kansiota /etc/ kansioon, koska käyttöoikeudet eivät riittäneet.
+Tämä ongelma oli helppo korjata suorittamalla scripti sudo oikeuksilla "sudo bash fastsetup".
 
-Tämän jälkeen latasin githubista tunnilla tehdyt puppet moduulit.
+
 
