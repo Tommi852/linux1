@@ -10,6 +10,7 @@
 - Muistitikku: Corsair 64GB Voyager Vega
 
 ## Aloitus
+#A)
 Aloitin tehtävän tekemällä bash scriptin nimeltä "fastsetup" githubin, puppetin ja asetusten asennusta varten. Scriptiin kirjoitin:
 ```
 #!/bin/bash
@@ -27,5 +28,11 @@ Kokeilin scriptin toimintaa komennolla "bash fastsetup" ja kaikki ohjelmat ohjel
 Scripti ei kuitenkaan onnistunut kopioimaan puppet kansiota /etc/ kansioon, koska käyttöoikeudet eivät riittäneet.
 Tämä ongelma oli helppo korjata suorittamalla scripti sudo oikeuksilla "sudo bash fastsetup".
 
-
+Sitten rupesin lisäämään puppetin moduulin asennusta scriptiin.
+Lisäsin vain SSH moduulin, sillä en välttämättä tarvitse apachea tai mysql:ää aina.
+Lisäsin moduulin asennuksen lisäämällä scriptin perään yhden rivin:
+```
+puppet apply --modulepath modules/ -e 'class {"ssh":}'
+```
+Kokeilin vielä SSH yhteyden toimivuuden ja se toimi juuri niinkuin pitää.
 
