@@ -63,11 +63,10 @@ Slave koneella muokkasin /etc/puppet/puppet.conf asetustiedostoa siten, että li
 [agent]
 server = master.local
 ```
-~~Tämän jälkeen sallin puppet slaven lisäämällä /etc/default/puppet tiedostoon rivin:
+~~Tämän jälkeen sallin puppet slaven lisäämällä /etc/default/puppet tiedostoon rivin:~~
 ```
 START=yes
 ```
-~~
 Päivitys. Ilmeisesti Xubuntulla ei tarvitse luoda tuota /etc/default/puppet tiedostoa vaan se on korvattu "sudo puppet agent --enable" komennolla.
 
 
