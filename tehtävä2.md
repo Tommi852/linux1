@@ -10,7 +10,7 @@
 - Muistitikku: Corsair 64GB Voyager Vega
 
 ## Aloitus
-# A)
+### A)
 Aloitin tehtävän tekemällä bash scriptin nimeltä "fastsetup" githubin, puppetin ja asetusten asennusta varten. Scriptiin kirjoitin:
 ```
 #!/bin/bash
@@ -36,7 +36,7 @@ puppet apply --modulepath modules/ -e 'class {"ssh":}'
 ```
 Kokeilin vielä SSH yhteyden toimivuuden ja se toimi juuri niinkuin pitää.
 
-# B)
+### B)
 
 Aloitin tehtävän asentamalla Oracle VM VirtualBox manageriin kaksi puhdasta Xubuntu 16.04.3 LTS distroa. Toisen nimeksi määritin asennuksessa master ja toisen slave.
 Asennusten valmistuttua asensin slave:lle puppetin ja masterille puppetmasterin.
@@ -62,4 +62,24 @@ Slave koneella muokkasin /etc/puppet/puppet.conf asetustiedostoa siten, että li
 ```
 [agent]
 server = master.local
+```
+Tämän jälkeen sallin puppet slaven lisäämällä /etc/default/puppet tiedostoon rivin:
+```
+START=yes
+```
+Nyt oli aika käynnistää slaven puppet uusiksi komennolla:
+```
+sudo service puppet restart
+```
+Tämän jälkeen tarkistin slaven sertifikaatin komennolla:
+```
+sudo puppet cert --list
+```
+Komento antoi yhden sertifikaatin:
+```
+  "slave" (SHA256) 46:CA:78:AB:B3:75:42:69:2E:F2:CE:BD:10:CE:39:A5:A3:F5:3C:F9:21:00:63:4B:F2:A9:DF:43:0A:F9:31:94
+```
+Tämän jälkeen hyväksyin sertifikaatin komennolla:
+```
+sudo puppet cert --sign slave
 ```
