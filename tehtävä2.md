@@ -145,3 +145,7 @@ master@master:/etc/puppet$ sudo tail -5 /var/log/puppet/masterhttp.log
 [2017-11-06 19:53:25] 192.168.56.102 - - [06/Nov/2017:19:53:25 EET] "PUT /production/report/slave HTTP/1.1" 200 9
 [2017-11-06 19:53:25] - -> /production/report/slave
 ```
+
+### Edit.
+Tästä vielä kuva kun konee pyörii
+![kuva koneista](https://i.imgur.com/z5NjnyF.png)
