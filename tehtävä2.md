@@ -135,3 +135,13 @@ sudo puppet agent --enable
 ja käynnistin vielä puppetin uudestaan.
 
 Tämän toimenpiteen jälkeen hello tiedosto oli ilmestynyt /tmp kansioon ja slave/master yhteys toimii niinkuin pitääkin.
+
+Tässä vielä pätkä tuosta masterhttp.log tailista.
+```
+master@master:/etc/puppet$ sudo tail -5 /var/log/puppet/masterhttp.log
+[2017-11-06 19:53:21] - -> /production/file_metadatas/plugins?links=manage&recurse=true&ignore=.svn&ignore=CVS&ignore=.git&checksum_type=md5
+[2017-11-06 19:53:24] 192.168.56.102 - - [06/Nov/2017:19:53:23 EET] "POST /production/catalog/slave HTTP/1.1" 200 1010
+[2017-11-06 19:53:24] - -> /production/catalog/slave
+[2017-11-06 19:53:25] 192.168.56.102 - - [06/Nov/2017:19:53:25 EET] "PUT /production/report/slave HTTP/1.1" 200 9
+[2017-11-06 19:53:25] - -> /production/report/slave
+```
