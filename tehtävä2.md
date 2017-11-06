@@ -83,3 +83,55 @@ Tämän jälkeen hyväksyin sertifikaatin komennolla:
 ```
 sudo puppet cert --sign slave
 ```
+Nyt on aika kokeilla toimiiko tämä master/slave viritelmä, joten luodaan uusi moduuli jonka slave voi noutaa.
+
+Aluksi menin masterilla /etc/puppet kansioon
+ja loin sinne tarvittavat kansiot:
+```
+sudo mkdir -p manifests/
+sudo mkdir -p modules/helloworld/manifests/
+```
+Lisäsin manifests kansioon site.pp tiedoston, jonka määrittelemät moduulit päivittyvät orjakoneille ja lisäsin sinne uuden moduulin:
+```
+include hello
+```
+Tämän jälkeen loin uuden moodulin hello komennolla:
+```
+sudoedit modules/hello/manifests/init.pp
+```
+Moduuliin kirjoitin:
+```
+class hello {
+        file { '/tmp/hello':
+                content => "Tervehdys. Olet nyt orjani ja et voi sille mitään T. Hackerman\n"
+        }
+}
+```
+Kokeilin päivittyykö moduuli orjalle käynnistämällä orjan uudestaa komennolla:
+```
+sudo service puppet restart
+```
+ja katsomalla /tmp/ kansioon onko sinne ilmestynyt uusi tiedosto.
+Jostain syystä tiedosto ei muodostunut slavelle.
+
+Pienen pohtimisen ja tutkimisen jälkeen katsoin, että puppet master on käynnissä komennolla:
+```
+sudo service puppetmaster status
+```
+Tilana oli active (running) ja kaikki näytti olevan kunnossa.
+Kokeilin saman slavelle komennolla:
+```
+sudo service puppet status
+```
+Slavellakin luki active (running). Luin statuksen antamia tietoja tarkemmin ja siellä luki:
+```
+marras 06 19:44:23 slave puppet-agent[2813]: Skipping run of Puppet configuration client
+marras 06 19:44:23 slave puppet-agent[2813]: Use 'puppet agent --enable' to re-enable.
+```
+Puppet siis jostain syystä skippaa configuroinnin.  Syötin statuksen ehdottaman komennon:
+```
+sudo puppet agent --enable
+```
+ja käynnistin vielä puppetin uudestaan.
+
+Tämän toimenpiteen jälkeen hello tiedosto oli ilmestynyt /tmp kansioon ja slave/master yhteys toimii niinkuin pitääkin.
