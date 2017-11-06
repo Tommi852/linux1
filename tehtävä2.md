@@ -44,3 +44,22 @@ Tämän jälkeen muutin virtual boxien verkko asetuksia siten, että kummatkin o
 
 Tarkistin yhteyden toimivuuden katsomalla kummankin koneen osoitteet komennolla "hostname -I". Tämän jälkeen kokeilin pingata kummallakin koneella toisiaan. Kummankin koneen paketit menivät perille toisilleen.
 
+Tämän jälkeen pysäytin puppetmasterin ja poistin puppetin ssl kansion komennoilla:
+```
+sudo service puppetmaster stop
+sudo rm -r /var/lib/puppet/ssl
+```
+Tämän jälkeen lisäsin puppetmasterin /etc/puppet/puppet.conf tiedostoon master asetuksiin dns alternatiivi nimet:
+```
+dns_alt_names = puppet, master.local, puppet.timonen.me
+```
+ja käynnistin puppetmasterin uudestaan.
+```
+sudo service puppetmaster start
+```
+Sitten olikin aika siirtyä slave koneen pariin.
+Slave koneella muokkasin /etc/puppet/puppet.conf asetustiedostoa siten, että lisäsin loppuun kohdan:
+```
+[agent]
+server = master.local
+```
