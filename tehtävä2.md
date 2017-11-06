@@ -10,7 +10,7 @@
 - Muistitikku: Corsair 64GB Voyager Vega
 
 ## Aloitus
-#A)
+# A)
 Aloitin tehtävän tekemällä bash scriptin nimeltä "fastsetup" githubin, puppetin ja asetusten asennusta varten. Scriptiin kirjoitin:
 ```
 #!/bin/bash
@@ -35,4 +35,12 @@ Lisäsin moduulin asennuksen lisäämällä scriptin perään yhden rivin:
 puppet apply --modulepath modules/ -e 'class {"ssh":}'
 ```
 Kokeilin vielä SSH yhteyden toimivuuden ja se toimi juuri niinkuin pitää.
+
+# B)
+
+Aloitin tehtävän asentamalla Oracle VM VirtualBox manageriin kaksi puhdasta Xubuntu 16.04.3 LTS distroa. Toisen nimeksi määritin asennuksessa master ja toisen slave.
+Asennusten valmistuttua asensin slave:lle puppetin ja masterille puppetmasterin.
+Tämän jälkeen muutin virtual boxien verkko asetuksia siten, että kummatkin ovat samassa lähiverkossa. Tämä onnistui kummankin koneen settingseissä olevien network asetusten muuttamisella Host-only adaptereiksi. Näin asetettuina koneet eivät saa yhteyttä ulkoiseen verkkoon, mutta saavat yhteyden toisiinsa.
+
+Tarkistin yhteyden toimivuuden katsomalla kummankin koneen osoitteet komennolla "hostname -I". Tämän jälkeen kokeilin pingata kummallakin koneella toisiaan. Kummankin koneen paketit menivät perille toisilleen.
 
