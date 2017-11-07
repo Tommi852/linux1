@@ -13,7 +13,7 @@ TTSCRIPT
 
 Vagrant.configure(2) do |config|
  config.vm.box = "minimal/xenial64"
- config.vm.provision "shell", inline: $tscript
+ config.vm.provision "shell", inline: $ttscript
 
  config.vm.define "slave01" do |slave01|
    slave01.vm.hostname = "slave01"
