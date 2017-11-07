@@ -4,6 +4,7 @@ sudo chown $USER:$USER ~/.bash_aliases
 sudo chmod 644 ~/.bash_aliases
 sudo echo "alias gimme='sudo apt-get -y install'" >> ~/.bash_aliases && source ~/.bash_aliases
 sudo echo "alias lookfor='sudo apt search'" >> ~/.bash_aliases && source ~/.bash_aliases
+sudo echo "alias pullpush='git add . && git commit; git pull && git push'" >> ~/.bash_aliases && source ~/.bash_aliases
 sudo apt-get update
 sudo apt-get -y install git
 sudo apt-get -y install puppet
