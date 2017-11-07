@@ -30,7 +30,7 @@ Sitten rupesin lisäämään puppetin moduulin asennusta scriptiin.
 Lisäsin vain SSH moduulin, sillä en välttämättä tarvitse apachea tai mysql:ää aina.
 Lisäsin moduulin asennuksen lisäämällä scriptin perään yhden rivin:
 ```
-puppet apply --modulepath modules/ -e 'class {"ssh":}'
+sudo puppet apply --modulepath modules/ -e 'class {"ssh":}'
 ```
 Kokeilin vielä SSH yhteyden toimivuuden ja se toimi juuri niinkuin pitää.
 
