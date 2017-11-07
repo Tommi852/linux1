@@ -1,7 +1,9 @@
 #!/bin/bash
 setxkbmap fi
-alias gimme="sudo apt-get -y install"
-alias lookfor="sudo apt search"
+sudo chown $USER:$USER ~/.bash_aliases
+sudo chmod 644 ~/.bash_aliases
+sudo echo "alias gimme='sudo apt-get -y install'" >> ~/.bash_aliases && source ~/.bash_aliases
+sudo echo "alias lookfor='sudo apt search'" >> ~/.bash_aliases && source ~/.bash_aliases
 sudo apt-get update
 sudo apt-get -y install git
 sudo apt-get -y install puppet
@@ -10,4 +12,4 @@ git config --global user.email "timonen@outlook.com"
 git config --global user.name "Tommi Timonen"
 git config --global credential.helper "cache --timeout=36000"
 sudo cp -r linux1/puppet/. /etc/puppet/
-sudo puppet apply --modulepath modules/ -e  'class {"ssh":}'
+sudo puppet apply -e  'class {"ssh":}'
