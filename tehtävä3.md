@@ -81,6 +81,8 @@ Tämän jälkeen asensin gnome-system-monitor ohjelman seuratakseni, ettei virtu
 
 Loppujen lopuksi sain asennettua yhden rauta masterin, yhden rauta orjan ja 51 virtuaali orjaa, kunnes vagrant ilmoitti, että virtuaalikoneella on tapahtunut portti yhteentörmäys, jota se on koittanut korjata automaattisesti, mutta kaikki automaattisen korjauksen käyttämät portit ovat jo käytössä.
 
+![Portit loppui kesken](https://raw.githubusercontent.com/Tommi852/linux1/master/kuvat/portitloppu.png)
+
 Tyydyin nyt toistaiseksi tähän määrään.
 
 #### B)
