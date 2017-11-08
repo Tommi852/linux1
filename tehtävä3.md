@@ -94,7 +94,7 @@ Lista koneiden certeistä löytyy täältä: https://github.com/Tommi852/linux1/
 Loki tiedosto löytyy: https://github.com/Tommi852/linux1/blob/master/orjaverkko1/syslog
 
 #### F) Unelmien tikku
-Yhdistin live tikkuni tietokoneeseen ja navigoin siellä tiedostoon /boot/grub/loopback.cfg
-Loopback.cfg tiedostossa muutin kohdan "Try Xubuntu without installing" mieleisekseni eli "Überh4x0r mode". Nyt grub valikossa pitäisi lukea "Überh4x0r mode".
+Yhdistin live tikkuni tietokoneeseen ja navigoin siellä tiedostoon /boot/grub/grub.cfg
+Grub.cfg tiedostossa muutin kohdan "Try Xubuntu without installing" mieleisekseni eli "Überh4x0r mode". Nyt grub valikossa pitäisi lukea "Überh4x0r mode".
 Tämän jälkeen muutin tämän menuentryn parametrejä sen verran, että poistin kohdan "quiet splash" ja laitoin sen tilalle "toram", jolloin USB tikku latautuu suoraan ramiin, jos valitsen GRUBista "Überh4x0r mode":n.
 
