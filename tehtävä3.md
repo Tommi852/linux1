@@ -88,4 +88,5 @@ En löytänyt edes grepillä mac tietoja /var/lib/puppet/ kansiosta, joten otin 
 
 Lista koneiden certeistä löytyy täältä: https://github.com/Tommi852/linux1/blob/master/certlist
 
-Loki tiedosto löytyy: 
+Loki tiedosto löytyy: https://github.com/Tommi852/linux1/blob/master/orjaverkko1/syslog
+
