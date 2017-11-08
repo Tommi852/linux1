@@ -79,12 +79,13 @@ vagrant up
 ```
 Tämän jälkeen asensin gnome-system-monitor ohjelman seuratakseni, ettei virtuaalikoneet tuki koko RAM muistia.
 
-Loppujen lopuksi sain asennettua 51 konetta, kunnes vagrant ilmoitti, että virtuaalikoneella on tapahtunut portti yhteentörmäys, jota se on koittanut korjata automaattisesti, mutta kaikki automaattisen korjauksen käyttämät portit ovat jo käytössä.
-Tyydyin nyt toistaiseksi tähän  määrään.
+Loppujen lopuksi sain asennettua yhden rauta masterin, yhden rauta orjan ja 51 virtuaali orjaa, kunnes vagrant ilmoitti, että virtuaalikoneella on tapahtunut portti yhteentörmäys, jota se on koittanut korjata automaattisesti, mutta kaikki automaattisen korjauksen käyttämät portit ovat jo käytössä.
+Tyydyin nyt toistaiseksi tähän määrään.
 
 ### B)
 
-Lista koneista:
-```
+En löytänyt edes grepillä mac tietoja /var/lib/puppet/ kansiosta, joten otin kopion koko kansiosta ihan varmuuden vuoksi, jos niitä voi jälkikäteen sitten lisäillä tähän.
 
-```
+Lista koneiden certeistä löytyy täältä: https://github.com/Tommi852/linux1/blob/master/certlist
+
+Loki tiedosto löytyy: 

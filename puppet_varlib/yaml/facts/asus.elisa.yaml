@@ -1,0 +1,98 @@
+--- !ruby/object:Puppet::Node::Facts
+  name: asus.elisa
+  values: 
+    kernel: Linux
+    virtual: physical
+    is_virtual: "false"
+    architecture: amd64
+    hardwaremodel: x86_64
+    operatingsystem: Debian
+    os: "{\x22name\x22=>\x22Debian\x22, \x22family\x22=>\x22Debian\x22, \x22release\x22=>{\x22major\x22=>\x22stretch/sid\x22, \x22full\x22=>\x22stretch/sid\x22}, \x22lsb\x22=>{\x22distcodename\x22=>\x22loki\x22, \x22distid\x22=>\x22elementary\x22, \x22distdescription\x22=>\x22elementary OS 0.4 Loki\x22, \x22distrelease\x22=>\x220.4\x22, \x22majdistrelease\x22=>\x220\x22, \x22minordistrelease\x22=>\x224\x22}}"
+    uniqueid: "007f0101"
+    osfamily: Debian
+    operatingsystemrelease: stretch/sid
+    kernelmajversion: "4.4"
+    lsbmajdistrelease: "0"
+    kernelrelease: "4.4.0-66-generic"
+    operatingsystemmajrelease: stretch/sid
+    uptime_days: "0"
+    selinux: "false"
+    memorysize: "3.84 GB"
+    memoryfree: "2.46 GB"
+    swapsize: "3.98 GB"
+    swapfree: "3.98 GB"
+    swapsize_mb: "4076.00"
+    swapfree_mb: "4076.00"
+    memorysize_mb: "3931.86"
+    memoryfree_mb: "2522.29"
+    lsbdistdescription: "elementary OS 0.4 Loki"
+    processors: "{\x22models\x22=>[\x22AMD E-350 Processor\x22, \x22AMD E-350 Processor\x22], \x22count\x22=>2, \x22physicalcount\x22=>1}"
+    ipaddress: "192.168.100.13"
+    macaddress: "f4:6d:04:a5:57:c8"
+    rubyplatform: x86_64-linux-gnu
+    uptime_seconds: "802"
+    lsbdistid: elementary
+    rubysitedir: /usr/local/lib/site_ruby/2.3.0
+    lsbdistrelease: "0.4"
+    netmask: "255.255.255.0"
+    lsbminordistrelease: "4"
+    uptime: "0:13 hours"
+    hostname: ASUS
+    boardmanufacturer: "ASUSTeK Computer Inc."
+    boardproductname: K73BY
+    boardserialnumber: BSN12345678901234567
+    bios_vendor: "American Megatrends Inc."
+    bios_version: "209"
+    bios_release_date: "04/20/2011"
+    manufacturer: "ASUSTeK Computer Inc."
+    productname: K73BY
+    serialnumber: B5N0CJ10434620D
+    uuid: "80BE54C3-4271-E011-9E33-F46D04A557C8"
+    type: Notebook
+    id: root
+    ps: "ps -ef"
+    kernelversion: "4.4.0"
+    processor0: "AMD E-350 Processor"
+    processor1: "AMD E-350 Processor"
+    processorcount: "2"
+    puppetversion: "3.8.5"
+    interfaces: "enp3s0,lo,wlp4s0"
+    macaddress_enp3s0: "f4:6d:04:a5:57:c8"
+    mtu_enp3s0: "1500"
+    ipaddress_lo: "127.0.0.1"
+    netmask_lo: "255.0.0.0"
+    mtu_lo: "65536"
+    ipaddress_wlp4s0: "192.168.100.13"
+    macaddress_wlp4s0: "e0:b9:a5:94:f3:0c"
+    netmask_wlp4s0: "255.255.255.0"
+    mtu_wlp4s0: "1500"
+    filesystems: "ext2,ext3,ext4,squashfs,vfat"
+    network_lo: "127.0.0.0"
+    network_wlp4s0: "192.168.100.0"
+    path: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    augeasversion: "1.4.0"
+    lsbdistcodename: loki
+    system_uptime: "{\x22seconds\x22=>802, \x22hours\x22=>0, \x22days\x22=>0, \x22uptime\x22=>\x220:13 hours\x22}"
+    uptime_hours: "0"
+    facterversion: "2.4.6"
+    dhcp_servers: "{\x22system\x22=>\x22192.168.100.1\x22, \x22wlp4s0\x22=>\x22192.168.100.1\x22}"
+    domain: Elisa
+    rubyversion: "2.3.1"
+    partitions: "{\x22sda1\x22=>{\x22uuid\x22=>\x22488c5c0e-5b3b-46a4-b925-17300733d14a\x22, \x22size\x22=>\x22997376\x22, \x22mount\x22=>\x22/boot\x22, \x22filesystem\x22=>\x22ext2\x22}, \x22sda2\x22=>{\x22size\x22=>\x222\x22, \x22filesystem\x22=>\x22dos\x22}, \x22sda5\x22=>{\x22uuid\x22=>\x22d5452e29-544c-471b-a0f0-2a3c5f6c6990\x22, \x22size\x22=>\x22975769600\x22, \x22filesystem\x22=>\x22crypto_LUKS\x22}}"
+    timezone: EET
+    gid: root
+    fqdn: ASUS.Elisa
+    physicalprocessorcount: "1"
+    blockdevice_sda_size: "500107862016"
+    blockdevice_sda_vendor: ATA
+    blockdevice_sda_model: ST9500325AS
+    blockdevice_sr0_size: "1073741312"
+    blockdevice_sr0_vendor: HL-DT-ST
+    blockdevice_sr0_model: "DVDRAM GT34N"
+    blockdevices: "sda,sr0"
+    hardwareisa: x86_64
+    clientcert: asus.elisa
+    clientversion: "3.8.5"
+    clientnoop: "false"
+    "_timestamp": 2017-11-08 18:56:56.553415 +02:00
+  expiration: 2017-11-08 19:26:56.489617 +02:00

@@ -6,7 +6,7 @@
     domain: Elisa
     lsbmajdistrelease: "16.04"
     netmask: "255.255.255.0"
-    uptime_seconds: "5440"
+    uptime_seconds: "9040"
     kernelversion: "4.4.0"
     lsbdistid: Ubuntu
     architecture: amd64
@@ -24,8 +24,8 @@
     processor0: "Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz"
     processorcount: "1"
     ipaddress: "10.0.2.15"
-    uptime: "1:30 hours"
-    system_uptime: "{\x22seconds\x22=>5440, \x22hours\x22=>1, \x22days\x22=>0, \x22uptime\x22=>\x221:30 hours\x22}"
+    uptime: "2:30 hours"
+    system_uptime: "{\x22seconds\x22=>9040, \x22hours\x22=>2, \x22days\x22=>0, \x22uptime\x22=>\x222:30 hours\x22}"
     macaddress: "08:00:27:42:0e:40"
     blockdevice_sda_size: "62914560000"
     blockdevice_sda_vendor: ATA
@@ -34,13 +34,13 @@
     operatingsystemrelease: "16.04"
     osfamily: Debian
     memorysize: "180.37 MB"
-    memoryfree: "84.36 MB"
+    memoryfree: "83.99 MB"
     swapsize: "1024.00 MB"
     swapfree: "1020.52 MB"
     swapsize_mb: "1024.00"
     swapfree_mb: "1020.52"
     memorysize_mb: "180.37"
-    memoryfree_mb: "84.36"
+    memoryfree_mb: "83.99"
     ps: "ps -ef"
     partitions: "{\x22sda1\x22=>{\x22uuid\x22=>\x22beb01345-daa7-4993-b2ee-d8c2f5f10063\x22, \x22size\x22=>\x22997376\x22, \x22mount\x22=>\x22/boot\x22, \x22filesystem\x22=>\x22ext2\x22}, \x22sda2\x22=>{\x22size\x22=>\x222\x22, \x22filesystem\x22=>\x22dos\x22}, \x22sda5\x22=>{\x22size\x22=>\x22121876480\x22, \x22filesystem\x22=>\x22LVM2_member\x22}}"
     facterversion: "2.4.6"
@@ -70,7 +70,7 @@
     uptime_days: "0"
     hostname: slave19
     lsbdistrelease: "16.04"
-    uptime_hours: "1"
+    uptime_hours: "2"
     selinux: "false"
     lsbdistdescription: "Ubuntu 16.04.2 LTS"
     rubysitedir: /usr/local/lib/site_ruby/2.3.0
@@ -103,7 +103,7 @@
     clientcert: slave19.elisa
     clientversion: "3.8.5"
     clientnoop: "false"
-    "_timestamp": "2017-11-08 18:03:17 +0200"
+    "_timestamp": "2017-11-08 19:03:17 +0200"
     environment: production
   facts: !ruby/object:Puppet::Node::Facts
     name: slave19.elisa
@@ -112,7 +112,7 @@
       domain: Elisa
       lsbmajdistrelease: "16.04"
       netmask: "255.255.255.0"
-      uptime_seconds: "5440"
+      uptime_seconds: "9040"
       kernelversion: "4.4.0"
       lsbdistid: Ubuntu
       architecture: amd64
@@ -130,8 +130,8 @@
       processor0: "Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz"
       processorcount: "1"
       ipaddress: "10.0.2.15"
-      uptime: "1:30 hours"
-      system_uptime: "{\x22seconds\x22=>5440, \x22hours\x22=>1, \x22days\x22=>0, \x22uptime\x22=>\x221:30 hours\x22}"
+      uptime: "2:30 hours"
+      system_uptime: "{\x22seconds\x22=>9040, \x22hours\x22=>2, \x22days\x22=>0, \x22uptime\x22=>\x222:30 hours\x22}"
       macaddress: "08:00:27:42:0e:40"
       blockdevice_sda_size: "62914560000"
       blockdevice_sda_vendor: ATA
@@ -140,13 +140,13 @@
       operatingsystemrelease: "16.04"
       osfamily: Debian
       memorysize: "180.37 MB"
-      memoryfree: "84.36 MB"
+      memoryfree: "83.99 MB"
       swapsize: "1024.00 MB"
       swapfree: "1020.52 MB"
       swapsize_mb: "1024.00"
       swapfree_mb: "1020.52"
       memorysize_mb: "180.37"
-      memoryfree_mb: "84.36"
+      memoryfree_mb: "83.99"
       ps: "ps -ef"
       partitions: "{\x22sda1\x22=>{\x22uuid\x22=>\x22beb01345-daa7-4993-b2ee-d8c2f5f10063\x22, \x22size\x22=>\x22997376\x22, \x22mount\x22=>\x22/boot\x22, \x22filesystem\x22=>\x22ext2\x22}, \x22sda2\x22=>{\x22size\x22=>\x222\x22, \x22filesystem\x22=>\x22dos\x22}, \x22sda5\x22=>{\x22size\x22=>\x22121876480\x22, \x22filesystem\x22=>\x22LVM2_member\x22}}"
       facterversion: "2.4.6"
@@ -176,7 +176,7 @@
       uptime_days: "0"
       hostname: slave19
       lsbdistrelease: "16.04"
-      uptime_hours: "1"
+      uptime_hours: "2"
       selinux: "false"
       lsbdistdescription: "Ubuntu 16.04.2 LTS"
       rubysitedir: /usr/local/lib/site_ruby/2.3.0
@@ -209,8 +209,8 @@
       clientcert: slave19.elisa
       clientversion: "3.8.5"
       clientnoop: "false"
-      "_timestamp": "2017-11-08 18:03:17 +0200"
-    expiration: 2017-11-08 18:33:17.809852 +02:00
-  time: 2017-11-08 18:03:17.905017 +02:00
+      "_timestamp": "2017-11-08 19:03:17 +0200"
+    expiration: 2017-11-08 19:33:17.845079 +02:00
+  time: 2017-11-08 19:03:17.946276 +02:00
   environment: production
-  expiration: 2017-11-08 18:33:17.906702 +02:00
+  expiration: 2017-11-08 19:33:17.949946 +02:00
