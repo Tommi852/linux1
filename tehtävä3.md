@@ -80,6 +80,7 @@ vagrant up
 Tämän jälkeen asensin gnome-system-monitor ohjelman seuratakseni, ettei virtuaalikoneet tuki koko RAM muistia.
 
 Loppujen lopuksi sain asennettua yhden rauta masterin, yhden rauta orjan ja 51 virtuaali orjaa, kunnes vagrant ilmoitti, että virtuaalikoneella on tapahtunut portti yhteentörmäys, jota se on koittanut korjata automaattisesti, mutta kaikki automaattisen korjauksen käyttämät portit ovat jo käytössä.
+
 Tyydyin nyt toistaiseksi tähän määrään.
 
 ### B)
