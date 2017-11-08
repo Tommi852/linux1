@@ -1,5 +1,5 @@
 ###### Pohjautuu terokarvinen.com sivun tehtäviin ja ohjeisiin
-# Linux tehtävä 1
+# Linux tehtävä 3
 
 ### Käytettävä laitteisto:
 - Käyttöjärjestelmä: Ubuntu 16.04.3 LTS
