@@ -2,7 +2,7 @@
 # Linux tehtävä 1
 
 ### Käytettävä laitteisto:
-- Käyttöjärjestelmä: Ubuntu 16.04.3 LTS
+- Käyttöjärjestelmä: Xubuntu 16.04.3 LTS
 - Prosessori: Intel Core i7-6700K
 - Näytönohjain: Gigabyte GeForce GTX 980 Ti G1 GAMING 6 GB
 - Emolevy: ASUS Z170 Pro Gaming
@@ -10,7 +10,7 @@
 
 ## Aloitus
 
-#### A), C) ja D)
+#### A), C) ja D) Orjat ja mestari, orjuuttajascripti, Vagrantfile provisointiscripti
 Aloitin tehtävän suorittamalla fastsetup scriptini, joka asettaa muutaman aliaksen, päivittää repositoryt, sekä asentaa gitin ja puppetin.
 Scripti löytyy täältä: https://github.com/Tommi852/linux1/blob/master/fastsetup
 Tämän jälkeen asensin puppet masterin komennolla:
@@ -85,11 +85,16 @@ Loppujen lopuksi sain asennettua yhden rauta masterin, yhden rauta orjan ja 51 v
 
 Tyydyin nyt toistaiseksi tähän määrään.
 
-#### B)
+#### B) Tietoja orjista
 
 En löytänyt edes grepillä mac tietoja /var/lib/puppet/ kansiosta, joten otin kopion koko kansiosta ihan varmuuden vuoksi, jos niitä voi jälkikäteen sitten lisäillä tähän.
 
 Lista koneiden certeistä löytyy täältä: https://github.com/Tommi852/linux1/blob/master/certlist
 
 Loki tiedosto löytyy: https://github.com/Tommi852/linux1/blob/master/orjaverkko1/syslog
+
+#### F) Unelmien tikku
+Yhdistin live tikkuni tietokoneeseen ja navigoin siellä tiedostoon /boot/grub/loopback.cfg
+Loopback.cfg tiedostossa muutin kohdan "Try Xubuntu without installing" mieleisekseni eli "Überh4x0r mode". Nyt grub valikossa pitäisi lukea "Überh4x0r mode".
+Tämän jälkeen muutin tämän menuentryn parametrejä sen verran, että poistin kohdan "quiet splash" ja laitoin sen tilalle "toram", jolloin USB tikku latautuu suoraan ramiin, jos valitsen GRUBista "Überh4x0r mode":n.
 
