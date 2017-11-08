@@ -1,7 +1,7 @@
 ###### Pohjautuu terokarvinen.com sivun tehtäviin ja ohjeisiin
 # Linux tehtävä 1
 
-## Käytettävä laitteisto:
+### Käytettävä laitteisto:
 - Käyttöjärjestelmä: Ubuntu 16.04.3 LTS
 - Prosessori: Intel Core i7-6700K
 - Näytönohjain: Gigabyte GeForce GTX 980 Ti G1 GAMING 6 GB
@@ -10,6 +10,7 @@
 
 ## Aloitus
 
+###A), C) ja D)
 Aloitin tehtävän suorittamalla fastsetup scriptini, joka asettaa muutaman aliaksen, päivittää repositoryt, sekä asentaa gitin ja puppetin.
 Scripti löytyy täältä: https://github.com/Tommi852/linux1/blob/master/fastsetup
 Tämän jälkeen asensin puppet masterin komennolla:
@@ -38,7 +39,48 @@ Laitoin puppetmasterin takaisin päälle komennolla:
 ```
 sudo service puppetmaster start
 ```
-Tein Vagrantfile nimisen tiedoston 
+Tein Vagrantfile nimisen tiedoston ja rakensin ohjeet vagrantille, kuinka koneet tulisi asentaa. Käytin loop rakennetta, jotta voin helposti määrätä montako konetta asennetaan.
+Koodiin on lisätty scripti nimeltä "slaver", joka määritetään puppetin asennuksen ja masterin tietojen asettamisen.
 
+Vagrantfile näyttää tältä:
+```
+Vagrant.configure(2) do |config|
 
+        config.vm.box = "minimal/xenial64"
+        config.vm.provision "shell", path: "slaver"
+(1..100).each do |i|
+        config.vm.define "slave#{i}" do |slave|
+                slave.vm.hostname = "slave#{i}"
 
+        slave.vm.provider "virtualbox" do |vb|
+                vb.memory = 150
+                vb.linked_clone = true
+        end
+
+ end
+end
+end
+```
+Ja slaver taas tältä:
+```
+# Modification of code found at http://TeroKarvinen.com/
+apt update
+apt install -y puppet
+echo "192.168.100.12 mestari420" |sudo tee --append /etc/hosts
+echo "[agent]"|sudo tee --append /etc/puppet/puppet.conf
+echo "server = mestari420"|sudo tee --append /etc/puppet/puppet.conf
+puppet agent --enable
+service puppet restart
+```
+Pistin Vagrantin asentelemaan koneita komennolla:
+```
+vagrant up
+```
+Tämän jälkeen asensin gnome-system-monitor ohjelman seuratakseni, ettei virtuaalikoneet tuki koko RAM muistia.
+
+### B)
+
+Lista koneista:
+```
+
+```
