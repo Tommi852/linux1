@@ -10,7 +10,7 @@
 
 ## Aloitus
 
-###A), C) ja D)
+#### A), C) ja D)
 Aloitin tehtävän suorittamalla fastsetup scriptini, joka asettaa muutaman aliaksen, päivittää repositoryt, sekä asentaa gitin ja puppetin.
 Scripti löytyy täältä: https://github.com/Tommi852/linux1/blob/master/fastsetup
 Tämän jälkeen asensin puppet masterin komennolla:
@@ -83,7 +83,7 @@ Loppujen lopuksi sain asennettua yhden rauta masterin, yhden rauta orjan ja 51 v
 
 Tyydyin nyt toistaiseksi tähän määrään.
 
-### B)
+#### B)
 
 En löytänyt edes grepillä mac tietoja /var/lib/puppet/ kansiosta, joten otin kopion koko kansiosta ihan varmuuden vuoksi, jos niitä voi jälkikäteen sitten lisäillä tähän.
 
