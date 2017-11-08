@@ -10,7 +10,7 @@
 
 ## Aloitus
 
-###A), C) ja D)
+### A), C) ja D)
 Aloitin tehtävän suorittamalla fastsetup scriptini, joka asettaa muutaman aliaksen, päivittää repositoryt, sekä asentaa gitin ja puppetin.
 Scripti löytyy täältä: https://github.com/Tommi852/linux1/blob/master/fastsetup
 Tämän jälkeen asensin puppet masterin komennolla:
