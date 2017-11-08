@@ -1,0 +1,26 @@
+--- 
+  version: 
+    config: 1510093516
+    puppet: "3.8.5"
+  resources: 
+    changed: 1
+    failed: 0
+    failed_to_restart: 0
+    out_of_sync: 1
+    restarted: 0
+    scheduled: 0
+    skipped: 0
+    total: 8
+  time: 
+    config_retrieval: 0.177775142
+    filebucket: 7.9316e-05
+    package: 10.736000175
+    schedule: 0.00035552399999999997
+    total: 10.914210157
+    last_run: 1510093528
+  changes: 
+    total: 1
+  events: 
+    failure: 0
+    success: 1
+    total: 1

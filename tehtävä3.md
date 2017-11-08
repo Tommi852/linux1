@@ -41,6 +41,7 @@ sudo service puppetmaster start
 ```
 Tein Vagrantfile nimisen tiedoston ja rakensin ohjeet vagrantille, kuinka koneet tulisi asentaa. Käytin loop rakennetta, jotta voin helposti määrätä montako konetta asennetaan.
 Koodiin on lisätty scripti nimeltä "slaver", joka määritetään puppetin asennuksen ja masterin tietojen asettamisen.
+Vagrantfilen työstäminen haluamanilaiseksi vei melko paljon aikaa sillä en ollut yhtään perillä sen syvemmästä toiminnasta. Hetken  tutkittuani sain kuitenkin puoli toimivan version ja jouduin kysymään stackoverflowsta apua. Stack overflowssa ystävällisesti neuvottiinkin miten koodi tulee korjata.
 
 Vagrantfile näyttää tältä:
 ```
@@ -77,6 +78,9 @@ Pistin Vagrantin asentelemaan koneita komennolla:
 vagrant up
 ```
 Tämän jälkeen asensin gnome-system-monitor ohjelman seuratakseni, ettei virtuaalikoneet tuki koko RAM muistia.
+
+Loppujen lopuksi sain asennettua 51 konetta, kunnes vagrant ilmoitti, että virtuaalikoneella on tapahtunut portti yhteentörmäys, jota se on koittanut korjata automaattisesti, mutta kaikki automaattisen korjauksen käyttämät portit ovat jo käytössä.
+Tyydyin nyt toistaiseksi tähän  määrään.
 
 ### B)
 

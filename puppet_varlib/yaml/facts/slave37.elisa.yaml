@@ -1,0 +1,106 @@
+--- !ruby/object:Puppet::Node::Facts
+  name: slave37.elisa
+  values: 
+    path: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    domain: Elisa
+    lsbmajdistrelease: "16.04"
+    netmask: "255.255.255.0"
+    uptime_seconds: "3728"
+    kernelversion: "4.4.0"
+    lsbdistid: Ubuntu
+    architecture: amd64
+    operatingsystemmajrelease: "16.04"
+    timezone: UTC
+    rubyversion: "2.3.1"
+    gid: root
+    kernel: Linux
+    id: root
+    kernelmajversion: "4.4"
+    processors: "{\x22models\x22=>[\x22Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz\x22], \x22count\x22=>1, \x22physicalcount\x22=>1}"
+    hardwaremodel: x86_64
+    operatingsystem: Ubuntu
+    os: "{\x22name\x22=>\x22Ubuntu\x22, \x22family\x22=>\x22Debian\x22, \x22release\x22=>{\x22major\x22=>\x2216.04\x22, \x22full\x22=>\x2216.04\x22}, \x22lsb\x22=>{\x22distcodename\x22=>\x22xenial\x22, \x22distid\x22=>\x22Ubuntu\x22, \x22distdescription\x22=>\x22Ubuntu 16.04.2 LTS\x22, \x22distrelease\x22=>\x2216.04\x22, \x22majdistrelease\x22=>\x2216.04\x22}}"
+    processor0: "Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz"
+    processorcount: "1"
+    ipaddress: "10.0.2.15"
+    uptime: "1:02 hours"
+    system_uptime: "{\x22seconds\x22=>3728, \x22hours\x22=>1, \x22days\x22=>0, \x22uptime\x22=>\x221:02 hours\x22}"
+    macaddress: "08:00:27:42:0e:40"
+    blockdevice_sda_size: "62914560000"
+    blockdevice_sda_vendor: ATA
+    blockdevice_sda_model: "VBOX HARDDISK"
+    blockdevices: sda
+    operatingsystemrelease: "16.04"
+    osfamily: Debian
+    memorysize: "180.37 MB"
+    memoryfree: "85.34 MB"
+    swapsize: "1024.00 MB"
+    swapfree: "1020.06 MB"
+    swapsize_mb: "1024.00"
+    swapfree_mb: "1020.06"
+    memorysize_mb: "180.37"
+    memoryfree_mb: "85.34"
+    ps: "ps -ef"
+    partitions: "{\x22sda1\x22=>{\x22uuid\x22=>\x22beb01345-daa7-4993-b2ee-d8c2f5f10063\x22, \x22size\x22=>\x22997376\x22, \x22mount\x22=>\x22/boot\x22, \x22filesystem\x22=>\x22ext2\x22}, \x22sda2\x22=>{\x22size\x22=>\x222\x22, \x22filesystem\x22=>\x22dos\x22}, \x22sda5\x22=>{\x22size\x22=>\x22121876480\x22, \x22filesystem\x22=>\x22LVM2_member\x22}}"
+    facterversion: "2.4.6"
+    interfaces: "enp0s3,lo"
+    ipaddress_enp0s3: "10.0.2.15"
+    macaddress_enp0s3: "08:00:27:42:0e:40"
+    netmask_enp0s3: "255.255.255.0"
+    mtu_enp0s3: "1500"
+    ipaddress_lo: "127.0.0.1"
+    netmask_lo: "255.0.0.0"
+    mtu_lo: "65536"
+    virtual: kvm
+    is_virtual: "true"
+    boardmanufacturer: "Oracle Corporation"
+    boardproductname: VirtualBox
+    boardserialnumber: "0"
+    bios_vendor: "innotek GmbH"
+    bios_version: VirtualBox
+    bios_release_date: "12/01/2006"
+    manufacturer: "innotek GmbH"
+    productname: VirtualBox
+    serialnumber: "0"
+    uuid: CDD9658D-9532-4BB5-ACF1-CA760901D2DA
+    type: Other
+    rubyplatform: x86_64-linux-gnu
+    uniqueid: "007f0101"
+    uptime_days: "0"
+    hostname: slave37
+    lsbdistrelease: "16.04"
+    uptime_hours: "1"
+    selinux: "false"
+    lsbdistdescription: "Ubuntu 16.04.2 LTS"
+    rubysitedir: /usr/local/lib/site_ruby/2.3.0
+    augeasversion: "1.4.0"
+    filesystems: "ext2,ext3,ext4,squashfs,vfat"
+    network_enp0s3: "10.0.2.0"
+    network_lo: "127.0.0.0"
+    sshdsakey: "AAAAB3NzaC1kc3MAAACBAMb1t9z7rep6jNkU+a6571K9aFZAJxh7fPKUEQdoEO+dkkSBVAqlxrkqPM4a6XHhMzP0Vn62+yMA/FhRi6tebPFJsWLV3vPx2B198ZHPc2/SvyB5QFJtUR36776Y9X03vKoJl3dJXH+Jotq1HYRSWwnYwScwk9PP1t6+fGXAmIbVAAAAFQCSNVtCUcXrUx6gwI0w/XHuESU/9QAAAIEAq1MGCab7MxV1XZeHjh8sZAQITHeRaTd/M4ZJ/9TXzQiTDmZCyl9Qv0MTavsAOQQtlN/ORAOsiRlpw1A3FGZspCbYlY3iKvK8dkTwkOBSBBi4X3fEnDuGCa0mhPoJPfjU19AalI2RdgfGdLoJ5cddh9bTYiPuZZ81bBWwJehj7ZkAAACBAJ7P2K97k3ogkJAWESeIf8dRpFMmGyhXK9a8daHz5TK23Cu0Hv/lpfvJcHyBcOWFZ+YoK7eX/5wuZA5Z0kFmInAtfVUwGchb2tOOaXs17gk2F1tSSVk9opQYQsw6005NsyP+306L2OPLF3GrLaugXhh+SamWEAGov2VFrgUodVdS"
+    sshfp_dsa: |-
+      SSHFP 2 1 8a3c102c22dfd6f91c87e3a12a4659de78a7bf0d
+      SSHFP 2 2 17f4672fce8e0364995b5e8fe415644b83f575ba2c3b9458994dfc5abf050fb3
+    sshrsakey: "AAAAB3NzaC1yc2EAAAADAQABAAABAQDVUr52COsZZdNhFQ3eeJPfZx+GVyPzIqOh2DlKrawh+JHAcynPuLKBtlZia7NHUt+Z9adYbGiYPimLJaTiZi/Gp9KpnI9tRO0S0eUWMjzY9clkHrkBZxN0AG4wij146KWvv8SHdmVtlLBYxSd8oVHnWnTalcGfhBfz0hTjTBui2+Gv+8kHO2oEpphyfBL367qfggmiC9jk5Pu6W2+UglTiDLm96X6QWo2wHTw5JTQ0Nc6vWdunAB1FaQNTUBvDhKMVC3mTU5gMe+SXiUoIboEvk5LgE1hYMJMHuhwMn0e8IGd5IOa284MgCb8eQq5l7a1Jzbp0rKdctiKBj1IijMUt"
+    sshfp_rsa: |-
+      SSHFP 1 1 bd824fc26ae1a09b1c5d3c80dba9e41d6962e918
+      SSHFP 1 2 f24f4752e82289ee0d722d2afe2c6f9aea1e466734e5795843023b7886231908
+    sshecdsakey: "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBc21Fe4ZqC8d6L06cEtutRK5bLdGQ1P0lUdt57aW4pG76/RhXGiygEdOL+YamwHHWl7j5nFo3FF4TUscuM/Kdc="
+    sshfp_ecdsa: |-
+      SSHFP 3 1 35de08a4f818907afb48fa43551a8ec036cc1c06
+      SSHFP 3 2 4018f7c39f0d26b4943f0e9d6993d1b78f1568aa490a07cd28741e5263470822
+    sshed25519key: "AAAAC3NzaC1lZDI1NTE5AAAAIBLUoRX7yRiXsSVrCWMstmiRk2mzGMKoRvX+3kPMWfiB"
+    sshfp_ed25519: |-
+      SSHFP 4 1 05af7a6245c65749bb200464fe1ccb6de8f56bea
+      SSHFP 4 2 b3c5ddc76909b7d7a564d3314ec5ff8e6c2f9248580a03bb56ef7068f5655fd3
+    fqdn: slave37.Elisa
+    lsbdistcodename: xenial
+    hardwareisa: x86_64
+    kernelrelease: "4.4.0-62-generic"
+    puppetversion: "3.8.5"
+    physicalprocessorcount: "1"
+    clientcert: slave37.elisa
+    clientversion: "3.8.5"
+    clientnoop: "false"
+    "_timestamp": 2017-11-08 17:48:24.527203 +02:00
+  expiration: 2017-11-08 16:18:24.468175 +00:00

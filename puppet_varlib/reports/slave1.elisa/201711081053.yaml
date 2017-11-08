@@ -1,0 +1,450 @@
+--- !ruby/object:Puppet::Transaction::Report
+  metrics: 
+    resources: !ruby/object:Puppet::Util::Metric
+      name: resources
+      label: Resources
+      values: 
+        - - total
+          - Total
+          - 12
+        - - skipped
+          - Skipped
+          - 0
+        - - failed
+          - Failed
+          - 0
+        - - failed_to_restart
+          - "Failed to restart"
+          - 0
+        - - restarted
+          - Restarted
+          - 0
+        - - changed
+          - Changed
+          - 4
+        - - out_of_sync
+          - "Out of sync"
+          - 4
+        - - scheduled
+          - Scheduled
+          - 0
+    time: !ruby/object:Puppet::Util::Metric
+      name: time
+      label: Time
+      values: 
+        - - schedule
+          - Schedule
+          - 0.000211914
+        - - filebucket
+          - Filebucket
+          - 5.1083e-05
+        - - package
+          - Package
+          - 3.383690731
+        - - service
+          - Service
+          - 0.005984311
+        - - file
+          - File
+          - 0.012182015999999999
+        - - config_retrieval
+          - "Config retrieval"
+          - 0.9215596750000259
+        - - total
+          - Total
+          - 4.323679730000027
+    changes: !ruby/object:Puppet::Util::Metric
+      name: changes
+      label: Changes
+      values: 
+        - - total
+          - Total
+          - 4
+    events: !ruby/object:Puppet::Util::Metric
+      name: events
+      label: Events
+      values: 
+        - - total
+          - Total
+          - 4
+        - - failure
+          - Failure
+          - 0
+        - - success
+          - Success
+          - 4
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym warning
+      tags: 
+        - warning
+      message: "Unable to fetch my node definition, but the agent run will continue:"
+      source: Puppet
+      time: 2017-11-08 10:53:24.487679 +00:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym warning
+      tags: 
+        - warning
+      message: "undefined method `include?' for nil:NilClass"
+      source: Puppet
+      time: 2017-11-08 10:53:24.491305 +00:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - package
+        - apache2
+        - class
+      message: "ensure changed 'purged' to 'present'"
+      source: /Stage[main]/Apache2/Package[apache2]/ensure
+      time: 2017-11-08 10:53:30.972171 +00:00
+      file: /etc/puppet/modules/apache2/manifests/init.pp
+      line: 6
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - apache2
+      message: created
+      source: /Stage[main]/Apache2/File[/etc/apache2/mods-enabled/userdir.conf]/ensure
+      time: 2017-11-08 10:53:30.979160 +00:00
+      file: /etc/puppet/modules/apache2/manifests/init.pp
+      line: 19
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - apache2
+      message: created
+      source: /Stage[main]/Apache2/File[/etc/apache2/mods-enabled/userdir.load]/ensure
+      time: 2017-11-08 10:53:30.979714 +00:00
+      file: /etc/puppet/modules/apache2/manifests/init.pp
+      line: 25
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - apache2
+      message: "content changed '{md5}9ad421244b28db9cb4a6857edd297ef5' to '{md5}8b1a9953c4611296a827abf8c47804d7'"
+      source: /Stage[main]/Apache2/File[/var/www/html/index.html]/content
+      time: 2017-11-08 10:53:30.990950 +00:00
+      file: /etc/puppet/modules/apache2/manifests/init.pp
+      line: 33
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+      message: "Finished catalog run in 3.41 seconds"
+      source: Puppet
+      time: 2017-11-08 10:53:30.994090 +00:00
+  resource_statuses: 
+    Schedule[daily]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[daily]
+      file: 
+      line: 
+      evaluation_time: 5.2754e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - daily
+      time: 2017-11-08 10:53:27.581842 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: daily
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[daily]
+    Schedule[monthly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[monthly]
+      file: 
+      line: 
+      evaluation_time: 2.4243e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - monthly
+      time: 2017-11-08 10:53:27.581980 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: monthly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[monthly]
+    Schedule[hourly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[hourly]
+      file: 
+      line: 
+      evaluation_time: 2.1935e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - hourly
+      time: 2017-11-08 10:53:27.582066 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: hourly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[hourly]
+    Schedule[never]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[never]
+      file: 
+      line: 
+      evaluation_time: 4.0442e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - never
+      time: 2017-11-08 10:53:27.582546 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: never
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[never]
+    Filebucket[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Filebucket[puppet]
+      file: 
+      line: 
+      evaluation_time: 5.1083e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - filebucket
+        - puppet
+      time: 2017-11-08 10:53:27.582682 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Filebucket
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Filebucket[puppet]
+    Schedule[weekly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[weekly]
+      file: 
+      line: 
+      evaluation_time: 2.8003e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - weekly
+      time: 2017-11-08 10:53:27.582787 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: weekly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[weekly]
+    Schedule[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[puppet]
+      file: 
+      line: 
+      evaluation_time: 4.4537e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - puppet
+      time: 2017-11-08 10:53:27.582896 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[puppet]
+    Package[apache2]: !ruby/object:Puppet::Resource::Status
+      resource: Package[apache2]
+      file: /etc/puppet/modules/apache2/manifests/init.pp
+      line: 6
+      evaluation_time: 3.383690731
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - package
+        - apache2
+        - class
+      time: 2017-11-08 10:53:27.588588 +00:00
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: purged
+          desired_value: present
+          historical_value: 
+          message: "ensure changed 'purged' to 'present'"
+          name: !ruby/sym package_installed
+          status: success
+          time: 2017-11-08 10:53:27.592443 +00:00
+      out_of_sync: true
+      changed: true
+      resource_type: Package
+      title: apache2
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Apache2
+        - Package[apache2]
+    Service[apache2]: !ruby/object:Puppet::Resource::Status
+      resource: Service[apache2]
+      file: /etc/puppet/modules/apache2/manifests/init.pp
+      line: 12
+      evaluation_time: 0.005984311
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - service
+        - apache2
+        - class
+      time: 2017-11-08 10:53:30.972581 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Service
+      title: apache2
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Apache2
+        - Service[apache2]
+    File[/etc/apache2/mods-enabled/userdir.conf]: !ruby/object:Puppet::Resource::Status
+      resource: File[/etc/apache2/mods-enabled/userdir.conf]
+      file: /etc/puppet/modules/apache2/manifests/init.pp
+      line: 19
+      evaluation_time: 0.000573254
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - apache2
+      time: 2017-11-08 10:53:30.978776 +00:00
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: link
+          historical_value: 
+          message: created
+          name: !ruby/sym link_created
+          status: success
+          time: 2017-11-08 10:53:30.979007 +00:00
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /etc/apache2/mods-enabled/userdir.conf
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Apache2
+        - File[/etc/apache2/mods-enabled/userdir.conf]
+    File[/etc/apache2/mods-enabled/userdir.load]: !ruby/object:Puppet::Resource::Status
+      resource: File[/etc/apache2/mods-enabled/userdir.load]
+      file: /etc/puppet/modules/apache2/manifests/init.pp
+      line: 25
+      evaluation_time: 0.000396425
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - apache2
+      time: 2017-11-08 10:53:30.979485 +00:00
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: link
+          historical_value: 
+          message: created
+          name: !ruby/sym link_created
+          status: success
+          time: 2017-11-08 10:53:30.979635 +00:00
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /etc/apache2/mods-enabled/userdir.load
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Apache2
+        - File[/etc/apache2/mods-enabled/userdir.load]
+    File[/var/www/html/index.html]: !ruby/object:Puppet::Resource::Status
+      resource: File[/var/www/html/index.html]
+      file: /etc/puppet/modules/apache2/manifests/init.pp
+      line: 33
+      evaluation_time: 0.011212337
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - apache2
+      time: 2017-11-08 10:53:30.980005 +00:00
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: content
+          previous_value: "{md5}9ad421244b28db9cb4a6857edd297ef5"
+          desired_value: "{md5}8b1a9953c4611296a827abf8c47804d7"
+          historical_value: 
+          message: "content changed '{md5}9ad421244b28db9cb4a6857edd297ef5' to '{md5}8b1a9953c4611296a827abf8c47804d7'"
+          name: !ruby/sym content_changed
+          status: success
+          time: 2017-11-08 10:53:30.980271 +00:00
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /var/www/html/index.html
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Apache2
+        - File[/var/www/html/index.html]
+  host: slave1.elisa
+  time: 2017-11-08 10:53:24.312801 +00:00
+  kind: apply
+  report_format: 4
+  puppet_version: "3.8.5"
+  configuration_version: 1510138406
+  transaction_uuid: "33c931f3-a6fa-4cd5-8e90-6b6fb6c318d4"
+  environment: production
+  status: changed

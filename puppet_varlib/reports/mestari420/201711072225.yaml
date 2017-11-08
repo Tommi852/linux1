@@ -1,0 +1,272 @@
+--- !ruby/object:Puppet::Transaction::Report
+  metrics: 
+    resources: !ruby/object:Puppet::Util::Metric
+      name: resources
+      label: Resources
+      values: 
+        - - total
+          - Total
+          - 8
+        - - skipped
+          - Skipped
+          - 0
+        - - failed
+          - Failed
+          - 0
+        - - failed_to_restart
+          - "Failed to restart"
+          - 0
+        - - restarted
+          - Restarted
+          - 0
+        - - changed
+          - Changed
+          - 1
+        - - out_of_sync
+          - "Out of sync"
+          - 1
+        - - scheduled
+          - Scheduled
+          - 0
+    time: !ruby/object:Puppet::Util::Metric
+      name: time
+      label: Time
+      values: 
+        - - package
+          - Package
+          - 10.736000175
+        - - schedule
+          - Schedule
+          - 0.00035552399999999997
+        - - filebucket
+          - Filebucket
+          - 7.9316e-05
+        - - config_retrieval
+          - "Config retrieval"
+          - 0.177775142
+        - - total
+          - Total
+          - 10.914210157
+    changes: !ruby/object:Puppet::Util::Metric
+      name: changes
+      label: Changes
+      values: 
+        - - total
+          - Total
+          - 1
+    events: !ruby/object:Puppet::Util::Metric
+      name: events
+      label: Events
+      values: 
+        - - total
+          - Total
+          - 1
+        - - failure
+          - Failure
+          - 0
+        - - success
+          - Success
+          - 1
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - package
+        - ssh
+        - class
+      message: "ensure changed 'purged' to 'present'"
+      source: /Stage[main]/Ssh/Package[ssh]/ensure
+      time: 2017-11-08 00:25:28.015464 +02:00
+      file: /etc/puppet/modules/ssh/manifests/init.pp
+      line: 6
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+      message: "Finished catalog run in 11.10 seconds"
+      source: Puppet
+      time: 2017-11-08 00:25:28.354694 +02:00
+  resource_statuses: 
+    Package[ssh]: !ruby/object:Puppet::Resource::Status
+      resource: Package[ssh]
+      file: /etc/puppet/modules/ssh/manifests/init.pp
+      line: 6
+      evaluation_time: 10.736000175
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - package
+        - ssh
+        - class
+      time: 2017-11-08 00:25:17.279630 +02:00
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: !ruby/sym purged
+          desired_value: !ruby/sym present
+          historical_value: 
+          message: "ensure changed 'purged' to 'present'"
+          name: !ruby/sym package_installed
+          status: success
+          time: 2017-11-08 00:25:17.292160 +02:00
+      out_of_sync: true
+      changed: true
+      resource_type: Package
+      title: ssh
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Ssh
+        - Package[ssh]
+    Schedule[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[puppet]
+      file: 
+      line: 
+      evaluation_time: 9.2845e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - puppet
+      time: 2017-11-08 00:25:28.016438 +02:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[puppet]
+    Schedule[hourly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[hourly]
+      file: 
+      line: 
+      evaluation_time: 5.1095e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - hourly
+      time: 2017-11-08 00:25:28.016645 +02:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: hourly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[hourly]
+    Schedule[daily]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[daily]
+      file: 
+      line: 
+      evaluation_time: 4.7445e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - daily
+      time: 2017-11-08 00:25:28.016782 +02:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: daily
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[daily]
+    Schedule[weekly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[weekly]
+      file: 
+      line: 
+      evaluation_time: 5.3776e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - weekly
+      time: 2017-11-08 00:25:28.016909 +02:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: weekly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[weekly]
+    Schedule[monthly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[monthly]
+      file: 
+      line: 
+      evaluation_time: 5.9897e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - monthly
+      time: 2017-11-08 00:25:28.017046 +02:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: monthly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[monthly]
+    Schedule[never]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[never]
+      file: 
+      line: 
+      evaluation_time: 5.0466e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - never
+      time: 2017-11-08 00:25:28.017171 +02:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: never
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[never]
+    Filebucket[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Filebucket[puppet]
+      file: 
+      line: 
+      evaluation_time: 7.9316e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - filebucket
+        - puppet
+      time: 2017-11-08 00:25:28.017365 +02:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Filebucket
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Filebucket[puppet]
+  host: mestari420
+  time: 2017-11-08 00:25:17.256528 +02:00
+  kind: apply
+  report_format: 4
+  puppet_version: "3.8.5"
+  configuration_version: 1510093516
+  transaction_uuid: edd3e8a7-63cd-4338-ae26-686ff231f3d7
+  environment: production
+  status: changed
