@@ -2,7 +2,7 @@ Vagrant.configure(2) do |config|
 
 	config.vm.box = "minimal/xenial64"
 	config.vm.provision "shell", path: "slaver"
-(1..100).each do |i|
+(1..30).each do |i|
 	config.vm.define "slave#{i}" do |slave|
 		slave.vm.hostname = "slave#{i}"
 
