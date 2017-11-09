@@ -1,7 +1,7 @@
 # Modification of code found at http://TeroKarvinen.com/
 apt update
 apt install -y puppet
-echo "192.168.100.12 mestari420" |sudo tee --append /etc/hosts
+echo "165.227.183.78 mestari420" |sudo tee --append /etc/hosts
 echo "[agent]"|sudo tee --append /etc/puppet/puppet.conf
 echo "server = mestari420"|sudo tee --append /etc/puppet/puppet.conf
 puppet agent --enable
