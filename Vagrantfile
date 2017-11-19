@@ -1,16 +1,18 @@
 Vagrant.configure(2) do |config|
+  config.vm.box = "minimal/trusty64"
+  config.vm.provision "shell", path: "slaver"
+  config.vm.usable_port_range = (2200..20000)
 
-	config.vm.box = "minimal/xenial64"
-	config.vm.provision "shell", path: "slaver"
-(1..100).each do |i|
-	config.vm.define "slave#{i}" do |slave|
-		slave.vm.hostname = "slave#{i}"
+  r = rand(36**10).to_s(36)
 
-	slave.vm.provider "virtualbox" do |vb|
-		vb.memory = 200
-		vb.linked_clone = true
-        end
+  (1..3).each do |i|
+    config.vm.define "slave#{i}" do |slave|
+	slave.vm.hostname = "Slave#{i}-#{r}"
 
- end
-end
+    slave.vm.provider "virtualbox" do |vb|
+       vb.memory = 180
+       vb.linked_clone = true
+    end
+    end
+  end
 end
