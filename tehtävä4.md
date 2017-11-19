@@ -22,7 +22,7 @@ Tein saman salt-minionille komennolla "sudo salt-minion"
 Salt-master ei halunnut toimia, vaan antoi koko ajan ilmoitusta "Unable to bind socket, error: [Errno 99] Cannot assign requested address".
 
 Käynnistelin salt-masteria uudestaan, mutta se ei vaan suostunut toimimaan ja edes salt-masterin resetointi ei enään onnistunut, vaan antoi virhettä.
-
+![Virhe](https://github.com/Tommi852/linux1/raw/master/kuvat/restart.png)
 Parin tunnin testailun jälkeen luovtin.
 
 
