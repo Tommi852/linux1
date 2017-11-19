@@ -83,6 +83,8 @@ Loppujen lopuksi sain asennettua yhden rauta masterin, yhden rauta orjan ja 51 v
 
 ![Portit loppui kesken](https://raw.githubusercontent.com/Tommi852/linux1/master/kuvat/portitloppu.png)
 
+Katsoin vielä, että slave koneilta löytyy /tmp/helloHackerman tiedosto, jonka olin laittanut masterin luomaan ja kyllähän ne löytyi.
+
 Tyydyin nyt toistaiseksi tähän määrään.
 
 #### B) Tietoja orjista
