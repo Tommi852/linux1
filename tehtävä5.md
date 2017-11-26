@@ -29,8 +29,9 @@ class hellowindows {
  file {"C:/windowsorja.txt":
    content => "Tervehdys windows roska väki!\n",
  }
+}
 ```
-Jonka lisäsin site.pp tiedostoon komennolla include hellowindows
+Jonka lisäsin site.pp tiedostoon komennolla "class {hellowindows:}"
 
 Hain kyseisen testi moduulin palvelimeltani komennolla "puppet agent -tdv"
 
@@ -38,3 +39,6 @@ Windows ei heti saanut asetuksia sillä en ollut vielä sallinut windowsin serti
 
 Pyöräytin haku komennon uudestaan ja puppet agent alkoi hakemaan tiedostoja palvelimeltani sillä olin asentanut chocolateyn palvelimelleni jo tunnilla. Hakeminen kesti melko kauan.
 
+Loppujen lopuksi tekstitiedosto ilmestyi C: aseman juureen, joten yhteystoimii.
+
+Seuraavaksi asettelin linuxin orjaksi vanhalle tietokoneelleni.
