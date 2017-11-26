@@ -11,3 +11,30 @@
 ## Aloitus
 
 #### A)
+
+Käytän masterina jälleen kerran omaa palvelintani.
+
+Aloitin tehtävän tekemällä windows koneestani orjan asentamalla puppetin osoitteesta: https://downloads.puppetlabs.com/windows/
+Asensin sieltä version 3.8.5-x64.
+
+Tämän jälkeen vaihdoin puppetin konffi tiedostoon polussa "C:\ProgramData\PuppetLabs\puppet\etc\puppet.conf" serverin omaani muokkaamalla server kohtaa:
+```
+[main]
+server=165.227.183.78
+```
+
+Tämän jälkeen tein palvelimelleni moduulin hellowindows
+```
+class hellowindows {
+ file {"C:/windowsorja.txt":
+   content => "Tervehdys windows roska väki!\n",
+ }
+```
+Jonka lisäsin site.pp tiedostoon komennolla include hellowindows
+
+Hain kyseisen testi moduulin palvelimeltani komennolla "puppet agent -tdv"
+
+Windows ei heti saanut asetuksia sillä en ollut vielä sallinut windowsin sertifikaattia palvelimellani, jonka kävin sitten hyväksymässä.
+
+Pyöräytin haku komennon uudestaan ja puppet agent alkoi hakemaan tiedostoja palvelimeltani sillä olin asentanut chocolateyn palvelimelleni jo tunnilla. Hakeminen kesti melko kauan.
+
