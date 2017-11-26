@@ -41,4 +41,19 @@ Pyöräytin haku komennon uudestaan ja puppet agent alkoi hakemaan tiedostoja pa
 
 Loppujen lopuksi tekstitiedosto ilmestyi C: aseman juureen, joten yhteystoimii.
 
-Seuraavaksi asettelin linuxin orjaksi vanhalle tietokoneelleni.
+Seuraavaksi asettelin linuxin orjaksi vanhalle tietokoneelleni ja pyöräytin siinä skriptin joka orjuutti sen nopeasti.
+```
+#!/bin/bash
+sudo apt-get update
+sudo apt-get install -y puppet
+sudo echo "165.227.183.78 mestari420" |sudo tee --append /etc/hosts
+sudo echo "[agent]"|sudo tee --append /etc/puppet/puppet.conf
+sudo echo "server = mestari420"|sudo tee --append /etc/puppet/puppet.conf
+sudo puppet agent --enable
+sudo service puppet restart
+```
+Sallin taas tämänkin koneen palvelimellani.
+Käytin aikaisemmissa tehtävissä tekemääni helloworld moduulia joka luo helloworld tiedoston /tmp kansioon ja se toimii.
+
+#### B)
+
