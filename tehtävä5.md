@@ -55,5 +55,35 @@ sudo service puppet restart
 Sallin taas tämänkin koneen palvelimellani.
 Käytin aikaisemmissa tehtävissä tekemääni helloworld moduulia joka luo helloworld tiedoston /tmp kansioon ja se toimii.
 
+Nyt minulla on siis windows ja linux orja samanaikaisesti.
+
 #### B)
 
+Tein moduulin, joka asentaa windowsille VLC soittimen. 
+
+```
+class hellowindows {
+   include chocolatey
+
+   Package {
+       ensure => "installed",
+       provider => "chocolatey",
+   }
+
+ file {"C:/windowsorja.txt":
+   content => "Tervehdys windows roska väki!\n",
+ }
+
+
+   package {["vlc"]:}
+
+}
+```
+
+Koska minulla oli jo VLC asennettuna, niin päätin poistaa sen nähdäkseni asentuuko se.
+
+Koska A kohdassa otimme jo hellowindowsin käyttöön ei sitä tarvitse tässä enään erikseen lisätä site.pp tiedostoon.
+
+Ajan taas windowsilla puppetin päivityksen, jotta näemme toimiiko moduuli.
+
+Ajettuani komennon "puppet agent -tdv" VLC asentui nätisti ja ilmaantui työpöydälle. Moduuli siis toimii.
