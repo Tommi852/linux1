@@ -72,14 +72,7 @@ mestari420:
 ```
 Kokeilin omalla koneellani oliko bastet asentunut ja kyllähän se hurahti käyntiin, kun kirjoitin komentoriville "bastet".
 
-<<<<<<< HEAD
 Näin tuli salt-master testattua.
-
-=======
-Käynnistelin salt-masteria uudestaan, mutta se ei vaan suostunut toimimaan ja edes salt-masterin resetointi ei enään onnistunut, vaan antoi virhettä.
-![Virhe](https://github.com/Tommi852/linux1/raw/master/kuvat/restart.png)
-Parin tunnin testailun jälkeen luovtin.
->>>>>>> b1cb54f8624ea8ab470c59b21b5ade0e2e332c70
 
 
 #### A) Ansible
@@ -99,7 +92,7 @@ Tämän jälkeen asensin SSH:n orjakoneelle ja lisäsin masterin julkisen avaime
 ssh-keygen -t rsa
 ssh-copy-id tommi@timonen.me
 ```
-yhteys ei aluksi meinannut toimia, joten jouduin käyttämään komentoa "ssh-add", jotta saisin yksityisen identiteetin käyttöön.
+Yhteys ei aluksi meinannut toimia, joten jouduin käyttämään komentoa "ssh-add", jotta saisin yksityisen identiteetin käyttöön.
 Tämän jälkeen jouduin tekemään masterin vahvistukseen uudestaan pakotettuna komennolla:
 ```
 sudo ssh-copy-id -f tommi@timonen.me
